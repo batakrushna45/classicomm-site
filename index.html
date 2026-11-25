@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classicomm Holdings</title>
+  <meta name="description" content="Classicomm Holdings">
+  <meta name="theme-color" content="#fdfbf6">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav" id="top">
+    <a class="brand" href="#top" aria-label="Home">
+      <svg class="crest" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M24 3 43 12v14c0 10-8 17-19 20C13 43 5 36 5 26V12z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M30 18a8 8 0 1 0 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M17 36h14" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+      <span id="brandName"></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    <nav id="menu" aria-label="Main"></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow" id="heroEyebrow"></p>
+        <h1 id="heroTitle"></h1>
+        <div class="rule"><i></i></div>
+        <p class="lead" id="heroSub"></p>
+        <a class="btn" id="heroBtn" href="#contact"></a>
+      </div>
+      <a class="scroll" href="#about" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <section id="about" class="sec" hidden>
+      <div class="wrap narrow center">
+        <h2 id="aboutH"></h2><div class="rule"><i></i></div>
+        <div id="aboutBody"></div>
+      </div>
+    </section>
+
+    <section id="focus" class="sec alt" hidden>
+      <div class="wrap center">
+        <h2 id="focusH"></h2><div class="rule"><i></i></div>
+        <p class="intro" id="focusIntro"></p>
+        <div class="cards" id="focusCards"></div>
+      </div>
+    </section>
+
+    <section id="approach" class="sec" hidden>
+      <div class="wrap center">
+        <h2 id="approachH"></h2><div class="rule"><i></i></div>
+        <div class="cols" id="approachCols"></div>
+      </div>
+    </section>
+
+    <section id="registration" class="sec alt" hidden>
+      <div class="wrap narrow center">
+        <h2 id="regH"></h2><div class="rule"><i></i></div>
+        <dl class="reg" id="regRows"></dl>
+      </div>
+    </section>
+
+    <section id="contact" class="sec" hidden>
+      <div class="wrap narrow center">
+        <h2 id="contactH"></h2><div class="rule"><i></i></div>
+        <p class="intro" id="contactIntro"></p>
+        <form id="enquiry" novalidate>
+          <div class="hp" aria-hidden="true"><label>Leave empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+          <div class="field"><label for="f-name" id="l-name"></label><input id="f-name" name="name" type="text" autocomplete="name" maxlength="120"><small class="err"></small></div>
+          <div class="field"><label for="f-email" id="l-email"></label><input id="f-email" name="email" type="email" autocomplete="email" maxlength="160"><small class="err"></small></div>
+          <div class="field"><label for="f-mobile" id="l-mobile"></label><input id="f-mobile" name="mobile" type="tel" autocomplete="tel" maxlength="30" inputmode="tel" placeholder="+971 50 000 0000"><small class="err"></small></div>
+          <div class="field"><label for="f-comments" id="l-comments"></label><textarea id="f-comments" name="comments" rows="6"></textarea><small class="count" id="count"></small><small class="err"></small></div>
+          <button class="btn solid" id="submitBtn" type="submit"></button>
+          <p class="status" id="status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="direct">Or write to us at <a id="mailLink" href="#"></a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap center">
+      <p id="footName"></p>
+      <p class="small" id="footNote"></p>
+      <nav class="footlinks" id="footLinks"></nav>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
