@@ -36,6 +36,9 @@ a:hover{color:var(--heading)}
    radial-gradient(ellipse at 90% 100%,rgba(193,154,74,.18),transparent 50%),
    linear-gradient(180deg,#fffdf8,var(--bg) 70%,var(--bg-alt));
 }
+.hero{background-image:linear-gradient(180deg,rgba(253,251,246,0) 70%,var(--bg) 100%),var(--hero-img,none),radial-gradient(ellipse at 50% 30%,rgba(230,207,147,.55),transparent 58%),linear-gradient(180deg,#fffdf8,var(--bg) 70%,var(--bg-alt));background-repeat:no-repeat;background-position:center bottom;background-size:100% 100%,max(100%,1100px) auto,auto,auto;padding-bottom:200px}
+.hero-inner::before{content:"";position:absolute;inset:-40px -60px;background:radial-gradient(ellipse,rgba(253,251,246,.85),rgba(253,251,246,0) 70%);z-index:-1}
+.hero-inner{position:relative;z-index:1}
 .hero::before{content:"";position:absolute;inset:22px;border:1px solid var(--line);pointer-events:none}
 .hero::after{content:"";position:absolute;inset:30px;border:1px solid rgba(193,154,74,.15);pointer-events:none}
 .hero-inner{max-width:860px;animation:rise 1.2s ease both}
@@ -127,3 +130,13 @@ footer .small{margin-top:6px;font-size:.72rem;opacity:.7}
   .hero::before{inset:12px}.hero::after{inset:18px}
   .reg div{flex-direction:column;gap:4px}.reg dd{text-align:left}
 }
+
+.disc{max-width:720px;margin:18px auto 0;font-size:.7rem!important;letter-spacing:.04em!important;text-transform:none!important;line-height:1.7;opacity:.6}
+.facade{position:relative;overflow:hidden}
+.facade::before{content:"";position:absolute;inset:0;background-image:var(--facade-img,none);background-size:cover;background-position:center;opacity:.22;pointer-events:none}
+.facade::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),rgba(253,251,246,.55) 35%,rgba(253,251,246,.55) 65%,var(--bg));pointer-events:none}
+.facade .wrap{position:relative;z-index:1}
+.reg dd{max-width:60%}
+@media (max-width:820px){.hero{padding-bottom:170px;background-size:100% 100%,auto 380px,auto,auto;background-position:center bottom,10% bottom,center,center}.reg dd{max-width:none}}
+
+.hero{overflow:hidden}
